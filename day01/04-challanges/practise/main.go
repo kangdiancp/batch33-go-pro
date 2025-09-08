@@ -32,6 +32,25 @@ func main() {
 			fmt.Printf("%d ", i)
 		}
 	}
+	fmt.Println("\nBOX PRIME")
+
+	boxPrime(150)
+}
+
+func boxPrime(n int) {
+	count := 1
+	for i := 2; i <= n; i++ {
+		if isPrime(i) {
+			if count%6 == 0 {
+				fmt.Println("")
+			} else {
+
+				fmt.Printf("%d ", i)
+			}
+			count++
+
+		}
+	}
 }
 
 func isPrime(n int) bool {
