@@ -10,10 +10,19 @@ func showBackingArray(varName string, slice *[]int) {
 	}
 }
 
+/* func showBackingArray1(varName string, slice *[]int) {
+	fmt.Printf("[%s]\taddr[%p] len[%d] cap[%d] ", varName, slice, len(*slice), cap(*slice))
+
+	for i, s := range *slice {
+		fmt.Printf("[%d] addr:[%p] value:[%#v]\n", i, &(*slice)[i], s)
+	}
+}
+*/
 func main() {
 	//initial value
 	numbers := []int{10, 20, 30, 40, 50, 60, 70, 80, 90, 100}
 	showBackingArray("numbers", &numbers)
+	//showBackingArray("numbers", &numbers)
 
 	//delete index ke-0 or first elment
 	//[1:10] => [low:high] or [start:end]
